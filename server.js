@@ -40,7 +40,7 @@ app.get('/tasks', (req, res) => {
     const query = 'SELECT * FROM tasks';
     db.query(query, (err, results) => {
         if (err) {
-            console.error('could not pull up the tasks:', err);
+            console.error('Error loading tasks:', err);
             console.log('You did something wrong with the tasks');
             res.status(500).json({ error: 'Error retrieving tasks' });
         } else {
@@ -70,10 +70,10 @@ app.post('/tasks', (req, res) => {
         if (err) {
             console.error('could not insert the task:', err);
             console.log('could not add the task');
-            res.status(500).json({ error: 'Error inserting task' });
+            res.status(500).json({ error: 'Error adding task' });
         } else {
             console.log(results);
-            res.json({ message: 'Task inserted successfully' });
+            res.json({ message: 'Task added successfully' });
             res.status(200);
         }
     });
@@ -119,15 +119,15 @@ app.delete('/tasks/:id', (req, res) => {
  
     db.query(query, [taskId], (err, results) => {
         if (err) {
-            console.error("Error deleting task:", err);
-            return res.status(500).json({ error: "Error deleting task." });
+            console.error("Error removing task:", err);
+            return res.status(500).json({ error: "Error removing task." });
         }
-        res.status(200).json({ message: "Task deleted successfully" });
+        res.status(200).json({ message: "Task removed successfully" });
     });
 });
  
  
  
 app.listen(port, () => {
-    console.log('Express working homie');
+    console.log('Express is running');
 });
