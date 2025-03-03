@@ -1,0 +1,32 @@
+.formWrap {
+    padding: 10px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+}
+
+.form input {
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid grey;
+}
+
+.submitBtn {
+    width: 50%;
+    margin: 0 auto;
+    background: rgb(102, 0, 0);
+    /* background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); */
+    color: white;
+    text-transform: uppercase;
+    transition: all .4s ease-in-out;
+}
+
+.submitBtn:hover {
+    transform: scale(1.02);
+    box-shadow: rgba(255, 255, 255, 0.12) 0px 2px 4px 0px, rgba(255, 255, 255, 0.32) 0px 2px 16px 0px;
+}
