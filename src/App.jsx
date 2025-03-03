@@ -67,7 +67,7 @@ function App() {
   return (<>
  
     <div className="bg-blue-200 text-l border-4 border-green-500 p-4">
-      <h1>To-Do List</h1>
+      <h1>Task Manager</h1>
       <div>
         <input
           type="text"
@@ -106,7 +106,7 @@ function App() {
                 })
               }
             />
-            <button onClick={() => deleteTask(task.id)}>Delete</button>
+            <button onClick={() => deleteTask(task.id)}>Remove</button>
           </li>
         ))}
       </ul>
